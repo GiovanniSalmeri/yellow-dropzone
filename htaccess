@@ -1,0 +1,12 @@
+# The following lines prevent running executable files
+# Do not ever delete them
+AddHandler cgi-script .php .pl .jsp .asp .sh .cgi
+Options -ExecCGI
+php_flag engine off
+# The following line prevents listing the content of the directory
+Options -Indexes
+# The following lines prevent downloading files
+# Allowing the donwload of files arbitrarily uploaded by visitors can have legal consequences
+Order deny,allow
+Deny from all
+# Require all denied # for Apache 2.4
