@@ -2,7 +2,7 @@ Dropzone 0.8.10
 =============
 Drag-and-drop file uploads with image previews.
 
-<p align="center"><img src="dropzone-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
+<p align="center"><img src="dropzone-screenshot.png?raw=true" width="795" height="586" alt="Screenshot"></p>
 
 ## How to install extension
 
