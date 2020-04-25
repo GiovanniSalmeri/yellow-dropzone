@@ -31,8 +31,8 @@ This extension uses [DropzoneJS](https://www.dropzonejs.com/) by Matias Meno, wh
 
 The following settings can be configured in file `system/settings/system.ini`:
 
-`DropzoneDir` (default: `media/uploads/`) = directory where files are uploaded
-`DropzoneAcceptedFiles` (default: `.jpg,.png,.txt,.md`) = a comma separated list of file extensions allowed
+`DropzoneDir` (default: `media/uploads/`) = directory where files are uploaded  
+`DropzoneAcceptedFiles` (default: `.jpg,.png,.txt,.md`) = a comma separated list of file extensions allowed  
 `DropzoneMaxFilesize` (default: `10`) = maximum size of a single file, in MB  
 `DropzoneOverwrite` (default: `0`) = whether files with the same name are overwritten (if not, after `file.txt` they are renamed `file.1.txt`, `file.2.txt` and so on)  
 
