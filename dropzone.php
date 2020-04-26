@@ -45,8 +45,9 @@ class YellowDropzone {
                                 $fileCount += 1;
                             }
                         }
-                        @move_uploaded_file($tempFile, $this->yellow->system->get("dropzoneDir").$target["filename"].($fileCount ? ".".$fileCount : "").".".$target["extension"]);
-                        // TODO: if the upload fails an error message should be passed to dropzone
+                        if (!@move_uploaded_file($tempFile, $this->yellow->system->get("dropzoneDir").$target["filename"].($fileCount ? ".".$fileCount : "").".".$target["extension"])) {
+                            $this->yellow->page->clean(500);
+                        };
                     }
                 }
                 $_FILES = null; // avoids multiple submissions if more dropzones in the same page
