@@ -27,7 +27,7 @@ Embedding a drag-and-drop area with various options:
 
 ## Settings
 
-The following settings can be configured in file `system/settings/system.ini`:
+The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `DropzoneDir` (default: `media/uploads/`) = directory where files are uploaded  
 `DropzoneAcceptedFiles` (default: `.jpg,.png,.txt,.md`) = a comma separated list of file extensions allowed  
