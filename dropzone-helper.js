@@ -1,3 +1,5 @@
+// Dropzone extension, https://github.com/GiovanniSalmeri/yellow-dropzone
+
 "use strict";
 document.addEventListener("DOMContentLoaded", function() {
     var dz = document.getElementsByClassName("dropzone-data");
