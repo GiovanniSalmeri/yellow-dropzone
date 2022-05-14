@@ -2,7 +2,7 @@
 // Dropzone extension, https://github.com/GiovanniSalmeri/yellow-dropzone
 
 class YellowDropzone {
-    const VERSION = "0.8.16";
+    const VERSION = "0.8.17";
     public $yellow;         //access to API
 
     // Handle initialisation
@@ -43,7 +43,7 @@ class YellowDropzone {
                             }
                         }
                         if (!@move_uploaded_file($tempFile, $this->yellow->system->get("dropzoneDirectory").$target["filename"].($fileCount ? ".".$fileCount : "").".".$target["extension"])) {
-                            $this->yellow->page->clean(500);
+                            $this->yellow->page->status(500);
                         };
                     }
                 }

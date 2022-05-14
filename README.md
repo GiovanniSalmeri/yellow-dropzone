@@ -1,4 +1,4 @@
-# Dropzone 0.8.16
+# Dropzone 0.8.17
 
 Drag-and-drop file uploads with image previews.
 
