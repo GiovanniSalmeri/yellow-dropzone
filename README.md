@@ -2,7 +2,7 @@
 
 Drag-and-drop file uploads with image previews.
 
-<p align="center"><img src="dropzone-screenshot.png?raw=true" width="795" height="586" alt="Screenshot"></p>
+<p align="center"><img src="dropzone-screenshot.png?raw=true" alt="Screenshot"></p>
 
 ## How to create a drag-and-drop area for file uploads
 
