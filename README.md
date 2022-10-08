@@ -42,4 +42,4 @@ This extension uses [DropzoneJS](https://www.dropzonejs.com/) by Matias Meno.
 
 ## Developer
 
-Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-dropzone/issues).
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
