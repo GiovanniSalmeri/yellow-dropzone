@@ -9,8 +9,8 @@ class YellowDropzone {
     public function onLoad($yellow) {
         $this->yellow = $yellow;
         $this->yellow->system->setDefault("dropzoneDirectory", "media/uploads/");
-        $this->yellow->system->setDefault("dropzoneAcceptedFiles", ".jpg,.png,.txt,.md");
-        $this->yellow->system->setDefault("dropzoneMaxFilesize", "10"); // in MB
+        $this->yellow->system->setDefault("dropzoneExtensions", ".jpg,.png,.txt,.md");
+        $this->yellow->system->setDefault("dropzoneFileSizeMax", "10"); // in MB
         $this->yellow->system->setDefault("dropzoneOverwrite", "0");
     }
 
@@ -30,8 +30,8 @@ class YellowDropzone {
                 $output .= "></span>\n";
             }
             if ($_FILES) {
-                $maxFilesize = $this->yellow->system->get("dropzoneMaxFilesize")*1000000;
-                $allowedExts = preg_split("/\s*,\s*/", $this->yellow->system->get("dropzoneAcceptedFiles"));
+                $maxFilesize = $this->yellow->system->get("dropzoneFileSizeMax")*1000000;
+                $allowedExts = preg_split("/\s*,\s*/", $this->yellow->system->get("dropzoneExtensions"));
                 foreach ((array)$_FILES['file']['tmp_name'] as $key => $tempFile) {
                     $target = pathinfo(((array)$_FILES['file']['name'])[$key]);
                     $fileType = strtoloweru($target["extension"]);
@@ -58,13 +58,13 @@ class YellowDropzone {
         $output = null;
         if ($name == "header") {
             $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
-            $maxFilesize = min($this->yellow->toolbox->getNumberBytes(ini_get("post_max_size")), $this->yellow->toolbox->getNumberBytes(ini_get("upload_max_filesize")), $this->yellow->system->get("dropzoneMaxFilesize")*1000000);
+            $maxFilesize = min($this->yellow->toolbox->getNumberBytes(ini_get("post_max_size")), $this->yellow->toolbox->getNumberBytes(ini_get("upload_max_filesize")), $this->yellow->system->get("DropzoneFileSizeMax")*1000000);
             $output .= "<link href=\"{$extensionLocation}dropzone.css\" type=\"text/css\" rel=\"stylesheet\" />\n";
             $output .= "<script src=\"{$extensionLocation}dropzone-helper.js\"></script>\n"; // 1st
             $output .= "<script src=\"{$extensionLocation}dropzone.js\"></script>\n"; // 2nd
             $output .= "<script>\n"; // 3rd
             $output .= "var d = Dropzone.prototype.defaultOptions;\n";
-            $output .= "d.acceptedFiles = ".json_encode($this->yellow->system->get("dropzoneAcceptedFiles")).";\n";
+            $output .= "d.acceptedFiles = ".json_encode($this->yellow->system->get("dropzoneExtensions")).";\n";
             $output .= "d.maxFilesize = ".$maxFilesize.";\n";
             $output .= "d.uploadMultiple = true;\n";
             foreach (["DefaultMessage", "FileTooBig", "InvalidFileType", "ResponseError"] as $string) {
