@@ -12,6 +12,43 @@ class YellowDropzone {
         $this->yellow->system->setDefault("dropzoneExtensions", ".jpg,.png,.txt,.md");
         $this->yellow->system->setDefault("dropzoneFileSizeMax", "10"); // in MB
         $this->yellow->system->setDefault("dropzoneOverwrite", "0");
+        $this->yellow->language->setDefaults([
+            "Language: en",
+            "DropzoneDefaultMessage: Drop files here to upload",
+            "DropzoneFileTooBig: File is too big: @filesize MB. Max filesize: @maxFilesize MB",
+            "DropzoneInvalidFileType: You can't upload files of this type",
+            "DropzoneResponseError: Server responded with @statusCode code",
+            "Language: de",
+            "DropzoneDefaultMessage: Dateien zum Hochladen hier ablegen",
+            "DropzoneFileTooBig: Datei ist zu groß: @filesize MB. Maximale Dateigröße: @maxFilesize MB",
+            "DropzoneInvalidFileType: Sie können Dateien dieses Typs nicht hochladen",
+            "DropzoneResponseError: Der Server antwortete mit @statusCode Code",
+            "Language: fr",
+            "DropzoneDefaultMessage: Déposer les fichiers ici pour les télécharger",
+            "DropzoneFileTooBig: Le fichier est trop gros: @filesize MB. Taille maximale @maxFilesize MB",
+            "DropzoneInvalidFileType: Vous ne pouvez pas télécharger des fichiers de ce type",
+            "DropzoneResponseError: Server responded with @statusCode code",
+            "Language: it",
+            "DropzoneDefaultMessage: Trascina qui i file da caricare",
+            "DropzoneFileTooBig: Il file è troppo grande: @filesize MB. Dimensione massima: @maxFilesize MB",
+            "DropzoneInvalidFileType: Non è permesso caricare file di questo tipo",
+            "DropzoneResponseError: Il server ha risposto con un codice @statusCode",
+            "Language: es",
+            "DropzoneDefaultMessage: Deje caer los archivos aquí para subirlos",
+            "DropzoneFileTooBig: El archivo es demasiado grande: @filesize MB. Tamaño máximo: @maxFilesize MB",
+            "DropzoneInvalidFileType: No se pueden subir archivos de este tipo",
+            "DropzoneResponseError: El servidor respondió con el código @statusCode",
+            "Language: nl",
+            "DropzoneDefaultMessage: Laat de bestanden hier vallen om te uploaden",
+            "DropzoneFileTooBig: Bestand is te groot: @filesize MB. Maximale bestandsgrootte: @maxFilesize MB",
+            "DropzoneInvalidFileType: Je kunt dit type bestanden niet uploaden",
+            "DropzoneResponseError: Server reageerde met @statuscode code",
+            "Language: pt",
+            "DropzoneDefaultMessage: Solte os arquivos aqui para enviar",
+            "DropzoneFileTooBig: O arquivo é demasiado grande: @filesize MB. Tamanho máximo: @maxFilesize MB",
+            "DropzoneInvalidFileType: Não é possível enviar arquivos deste tipo",
+            "DropzoneResponseError: O servidor respondeu com o código @statusCode",
+        ]);
     }
 
     // Handle page content of shortcut
