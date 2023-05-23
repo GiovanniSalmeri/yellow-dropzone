@@ -33,10 +33,10 @@ Embedding a drag-and-drop area with various options:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`DropzoneDirectory` (default: `media/uploads/`) = directory where files are uploaded  
-`DropzoneExtensions` (default: `.jpg,.png,.txt,.md`) = a comma separated list of file extensions allowed  
-`DropzoneFileSizeMax` (default: `10`) = maximum size of a single file, in MB  
-`DropzoneOverwrite` (default: `0`) = whether files with the same name are overwritten (if not, after `file.txt` they are renamed `file.1.txt`, `file.2.txt` and so on)  
+`DropzoneDirectory` = directory where files are uploaded  
+`DropzoneExtensions` = a comma separated list of file extensions allowed  
+`DropzoneFileSizeMax` = maximum size of a single file, in MB  
+`DropzoneOverwrite` = whether files with the same name are overwritten (if not, after `file.txt` they are renamed `file.1.txt`, `file.2.txt` and so on)  
 
 ## Acknowledgements
 
