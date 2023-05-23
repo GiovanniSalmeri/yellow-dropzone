@@ -12,14 +12,14 @@ Drag-and-drop file uploads with image previews.
 
 Create a `[dropzone]` shortcut. 
 
-Please remark that in this way you will allow visitors, without any authentication, to upload files to your server. To limit abuses you could want for example to make the page private with a setting `Status: unlisted`.
+In this way you will allow visitors, without any authentication, to upload files to directory `media/uploads`. To limit abuses you could want to make the page unlisted with a setting `Status: unlisted`, or to protect with a password with the extension [Private](https://github.com/schulle4u/yellow-private) or [Restrict](https://github.com/GiovanniSalmeri/yellow-restrict).
 
-The following arguments are available, all of which are optional:
+The following arguments are available, all are optional:
 
-`AcceptedFiles` = a comma separated list of file extensions allowed   
+`AcceptedFiles` = comma separated list of file extensions allowed   
 `MaxFilesize` = maximum size of a single file, in MB  
 
-These arguments, if specified, override the general settings.
+These arguments override the general settings.
 
 ## Examples
 
