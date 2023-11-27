@@ -2,11 +2,11 @@
 
 Drag-and-drop file uploads with image previews.
 
-<p align="center"><img src="dropzone-screenshot.png?raw=true" alt="Screenshot"></p>
+<p align="SCREENSHOT.png?raw=true" alt="Screenshot"></p>
 
 ## How to install an extension
 
-[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-dropzone/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-dropzone/archive/refs/heads/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
 
 ## How to create a drag-and-drop area for file uploads
 
