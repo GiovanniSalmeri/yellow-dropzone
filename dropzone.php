@@ -12,7 +12,7 @@ class YellowDropzone {
         $this->yellow->system->setDefault("dropzoneExtensions", ".jpg,.png,.txt,.md");
         $this->yellow->system->setDefault("dropzoneFileSizeMax", "10"); // in MB
         $this->yellow->system->setDefault("dropzoneOverwrite", "0");
-        $this->yellow->language->setDefaults([
+        $this->yellow->language->setDefaults(array(
             "Language: en",
             "DropzoneDefaultMessage: Drop files here to upload",
             "DropzoneFileTooBig: File is too big: @filesize MB. Max filesize: @maxFilesize MB",
@@ -48,7 +48,7 @@ class YellowDropzone {
             "DropzoneFileTooBig: O arquivo é demasiado grande: @filesize MB. Tamanho máximo: @maxFilesize MB",
             "DropzoneInvalidFileType: Não é possível enviar arquivos deste tipo",
             "DropzoneResponseError: O servidor respondeu com o código @statusCode",
-        ]);
+        ));
     }
 
     // Handle page content of shortcut
