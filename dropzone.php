@@ -2,7 +2,7 @@
 // Dropzone extension, https://github.com/GiovanniSalmeri/yellow-dropzone
 
 class YellowDropzone {
-    const VERSION = "0.8.17";
+    const VERSION = "0.9.1";
     public $yellow;         //access to API
 
     // Handle initialisation
@@ -52,7 +52,7 @@ class YellowDropzone {
     }
 
     // Handle page content of shortcut
-    public function onParseContentShortcut($page, $name, $text, $type) {
+    public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="dropzone" && ($type=="block" || $type=="inline")) {
             list($acceptedFiles, $maxFilesize) = $this->yellow->toolbox->getTextArguments($text);
@@ -94,11 +94,11 @@ class YellowDropzone {
     public function onParsePageExtra($page, $name) {
         $output = null;
         if ($name == "header") {
-            $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
+            $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
             $maxFilesize = min($this->yellow->toolbox->getNumberBytes(ini_get("post_max_size")), $this->yellow->toolbox->getNumberBytes(ini_get("upload_max_filesize")), $this->yellow->system->get("DropzoneFileSizeMax")*1000000);
-            $output .= "<link href=\"{$extensionLocation}dropzone.css\" type=\"text/css\" rel=\"stylesheet\" />\n";
-            $output .= "<script src=\"{$extensionLocation}dropzone-helper.js\"></script>\n"; // 1st
-            $output .= "<script src=\"{$extensionLocation}dropzone.js\"></script>\n"; // 2nd
+            $output .= "<link href=\"{$assetLocation}dropzone.css\" type=\"text/css\" rel=\"stylesheet\" />\n";
+            $output .= "<script src=\"{$assetLocation}dropzone-helper.js\"></script>\n"; // 1st
+            $output .= "<script src=\"{$assetLocation}dropzone.js\"></script>\n"; // 2nd
             $output .= "<script>\n"; // 3rd
             $output .= "var d = Dropzone.prototype.defaultOptions;\n";
             $output .= "d.acceptedFiles = ".json_encode($this->yellow->system->get("dropzoneExtensions")).";\n";
