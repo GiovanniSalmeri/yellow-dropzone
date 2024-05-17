@@ -51,7 +51,7 @@ class YellowDropzone {
         ));
     }
 
-    // Handle page content of shortcut
+    // Handle page content element
     public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="dropzone" && ($type=="block" || $type=="inline")) {
