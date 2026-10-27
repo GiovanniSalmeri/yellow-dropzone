@@ -2,7 +2,7 @@
 // Dropzone extension, https://github.com/GiovanniSalmeri/yellow-dropzone
 
 class YellowDropzone {
-    const VERSION = "0.9.1";
+    const VERSION = "1.0.0";
     public $yellow;         //access to API
 
     // Handle initialisation
@@ -96,7 +96,7 @@ class YellowDropzone {
         if ($name == "header") {
             $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
             $maxFilesize = min($this->yellow->toolbox->getNumberBytes(ini_get("post_max_size")), $this->yellow->toolbox->getNumberBytes(ini_get("upload_max_filesize")), $this->yellow->system->get("DropzoneFileSizeMax")*1000000);
-            $output .= "<link href=\"{$assetLocation}dropzone.css\" type=\"text/css\" rel=\"stylesheet\" />\n";
+            $output .= "<link href=\"{$assetLocation}dropzone.css\" rel=\"stylesheet\" />\n";
             $output .= "<script src=\"{$assetLocation}dropzone-helper.js\"></script>\n"; // 1st
             $output .= "<script src=\"{$assetLocation}dropzone.js\"></script>\n"; // 2nd
             $output .= "<script>\n"; // 3rd

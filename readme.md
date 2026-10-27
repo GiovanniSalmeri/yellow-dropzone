@@ -1,8 +1,8 @@
-# Dropzone 0.9.1
+# Dropzone 1.0.0
 
-Drag-and-drop file uploads with image previews.
+Drag-and-drop file uploads with image previews. Developed by Giovanni Salmeri.
 
-<p align="center"><img src="SCREENSHOT.png" alt="Screenshot"></p>
+<p align="center"><img src="screenshot.png" alt="Screenshot"></p>
 
 ## How to install an extension
 
@@ -40,8 +40,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 ## Acknowledgements
 
-This extension includes [DropzoneJS](https://www.dropzonejs.com/) by Matias Meno. Thank you for the good work.
+This extension includes [DropzoneJS](https://www.dropzonejs.com/) by Matias Meno. Thank you for the useful library.
 
-## Developer
-
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
+Do you have questions? [Get help](https://datenstrom.se/yellow/help/).
